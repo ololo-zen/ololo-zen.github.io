@@ -86,10 +86,11 @@ function init() {
       cardsInGame = cardsInGame.concat(cardsInGame);
       cardsInGame = arrMix(cardsInGame);
 
-      //получить коллекцию div.front и навешать событие по клику
+      //получить коллекцию div.front и навешать событие по клику после закрытия карт,
+      //чтобы не позволять игроку переворачивать их
       let frontBlock = document.querySelectorAll('.front'); 
       for (let i = 0; i <frontBlock.length; i++) {
-         setTimeout(() => frontBlock[i].addEventListener('click', showCard), 2000) 
+         setTimeout(() => frontBlock[i].addEventListener('click', showCard), 8500) 
       }
 
       //Добавить карты из игрового массива на стол
