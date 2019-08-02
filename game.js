@@ -89,7 +89,7 @@ function init() {
       //получить коллекцию div.front и навешать событие по клику
       let frontBlock = document.querySelectorAll('.front'); 
       for (let i = 0; i <frontBlock.length; i++) {
-         frontBlock[i].addEventListener('click', showCard);  
+         setTimeout(() => frontBlock[i].addEventListener('click', showCard), 2000) 
       }
 
       //Добавить карты из игрового массива на стол
@@ -97,8 +97,8 @@ function init() {
          let newCard = document.createElement('img');                //создать img
          newCard.src = 'assets/cards/' + cardsInGame[i] + '.png';    //путь 
          newCard.classList.add('card', 'flip180');                   //добавить стили css
-         frontBlock[i].dataset.id = cardsInGame[i];                    //присвоить data-атрибут
-         frontBlock[i].appendChild(newCard);                           //добавить в div.front
+         frontBlock[i].dataset.id = cardsInGame[i];                  //присвоить data-атрибут
+         frontBlock[i].appendChild(newCard);                         //добавить в div.front
       }
 
       //закрыть карты
