@@ -1,10 +1,113 @@
-   <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <title>Document</title>
-   </head>
-   <body>
-      <h1>Hello</h1>
-   </body>
-   </html>
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>MemoryGame</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
+    <script src="game.js"></script>
+</head>
+
+<body>
+    <div class="content">
+
+        <div class="start">
+            <img class="start__logo" src="assets/StartGame.png" alt="">
+            <h1 class="startTitle start__startTitle">Memory Game</h1>
+            <button class="startBtn start__startBtn" id="startBtn" type="button" onclick="start()">Начать игру</button>
+        </div>
+
+
+        <div class="game hidden">
+            <div class="menu">
+                <a href="" class="restart menu__restart" onclick="restart()">Начать заново</a>
+                <p class="menu__score">Очки: <span id="score">0</span></p>
+            </div>
+            <div id="table">
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div> 
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div> 
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+               </div>
+                <div class="cards">
+                    <div class="front"></div> 
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div> 
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+                <div class="cards">
+                    <div class="front"></div>
+                    <div class="back"><img src="assets/cards/shirt.png" class="card"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="end hidden">
+            <img class="end__logo" src="assets/Group 2.png" alt="">
+            <h1 class="congrats end__congrats">Поздравляем!</h1>
+            <p class="score end__score">Ваш итоговый счет: <span id="total"></span></p>
+            <button class="restartBtn end__restartBtn" id="restartBtn" type="button" onclick="restart()">Еще раз</button>
+        </div>
+    </div>
+</body>
+
+</html>
